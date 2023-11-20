@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ActorController;
 use App\Http\Controllers\BioskopController;
 use App\Http\Controllers\FilmFavoritController;
 use Illuminate\Support\Facades\Route;
@@ -23,3 +24,6 @@ Route::get('/films/detail/{film}', [FilmFavoritController::class, 'show']);
 
 Route::get('/bioskops/all', [BioskopController::class, 'index']);
 Route::get('/bioskops/detail/{bioskop}', [BioskopController::class, 'show']);
+
+Route::get('/actors/all', [ActorController::class, 'index']);
+Route::get('/actors/detail/{actor}', [ActorController::class, 'show']);
